@@ -1,5 +1,4 @@
 // @ts-check
-
 /** 
  * @template T
  * @typedef {{ data: T; response: boolean; status: number; }} DataType
@@ -8,7 +7,7 @@
 /** Clase que permite hacer peticiones al api */
 class ApiRequest {
   /** Ruta del api */
-  static apiPath = '/Prueba2022/private/';
+  static apiPath = 'http://127.0.0.1:8000/api/';
 
   constructor() { }
 
@@ -41,7 +40,7 @@ class ApiRequest {
    * @param {string} controller Nombre del controlador del api sin la palabra clave Controller (Puede ser escrito en PascalCase o kebab-case)
    * @param {string} method Nombre del método del controlador del api a ejecutar (Puede ser escrito en PascalCase o kebab-case)
    * @param {Record<string, any> | string} parameters Paramétros
-   * @returns {Promise<DataType<any>>} Retorno del servicio
+   * returns {Promise<DataType<any>>} Retorno del servicio
    */
   static request(action, controller, method, parameters = {}) {
     return new Promise((resolve, reject) => {

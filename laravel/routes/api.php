@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CaracteristicasController;
-
+ 
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,3 +18,6 @@ use App\Http\Controllers\CaracteristicasController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('Caracteristicas/getAll',  [CaracteristicasController::class, 'getAll']);
+Route::get('Caracteristicas/{gce_id}',  [CaracteristicasController::class, 'getOne']);
+Route::post('Caracteristicas',  [CaracteristicasController::class, 'addOne']);

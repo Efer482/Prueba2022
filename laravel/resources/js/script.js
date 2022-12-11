@@ -55,7 +55,6 @@ class Computador {
       gce_estado: registerForm.querySelector('[name="gce_estado"]').value,
     };
     ApiRequest.post('Caracteristicas', 'addOne', parameters).then((response) => {
-      console.log("oeee")
       console.log('Añadir', response, response.data);
     }).catch(error => console.log('Ha ocurrido un error', error));
   };

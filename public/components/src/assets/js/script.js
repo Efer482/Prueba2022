@@ -6,11 +6,11 @@ class Computador {
 
   /** Actualiza el listado de computadores en la tabla */
   static get() {
+
     ApiRequest.get('Caracteristicas', 'getAll').then(response => {
       /** Referencia del cuerpo de la tabla */
       const tbody = document.querySelector('#list-table tbody');
       tbody.innerHTML = ''; // Limpia la tabla
-      console.log(ApiRequest.get('Caracteristicas', 'getAll'))
       response.data.forEach(item => {
         tbody.innerHTML += `<tr>
           <td>${item.gce_nombre_equipo}</td>

@@ -3,8 +3,7 @@
 namespace GCE\Controller;
 
 use GCE\Model\Caracteristicas;
-
-class CaracteristicasController
+class CaracteristicasController extends Controller
 {
 
     private $model;

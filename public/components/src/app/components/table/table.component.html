@@ -1,0 +1,39 @@
+<h6 class="ms-5">Computadores</h6>
+<!-- Listado -->
+<div class="card">
+  <div class="card-body">
+    <table id="list-table" class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Board</th>
+          <th>Case</th>
+          <th>Procesador</th>
+          <th>Gráfica</th>
+          <th>Ram</th>
+          <th>Disco duro</th>
+          <th>Teclado</th>
+          <th>Mouse</th>
+          <th>Pantalla</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let caracteristica of caracteristicas">
+          <td>{{caracteristica.gce_nombre_equipo}}</td>
+          <td>{{caracteristica.gce_board}}</td>
+          <td>{{caracteristica.gce_case}}</td>
+          <td>{{caracteristica.gce_procesador}}</td>
+          <td>{{caracteristica.gce_grafica}}</td>
+          <td>{{caracteristica.gce_ram}}</td>
+          <td>{{caracteristica.gce_disco_duro}}</td>
+          <td>{{caracteristica.gce_teclado}}</td>
+          <td>{{caracteristica.gce_mouse}}</td>
+          <td>{{caracteristica.gce_pantalla}}</td>
+            <!-- Imprime 'Activo' si la propiedad 'activo' del objeto 'caracteristica' tiene el valor 1, 'Inactivo' si tiene el valor 0 -->
+          <td>{{caracteristica.gce_estado ? 'Activo' : 'Inactivo'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
